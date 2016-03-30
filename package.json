@@ -1,0 +1,29 @@
+{
+  "name": "thunder-docs",
+  "version": "1.0.0",
+  "description": "documentation for thunder and related modules",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo index.js",
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thunder-project/thunder-docs.git"
+  },
+  "keywords": [
+    "thunder",
+    "image",
+    "time-series",
+    "documentation"
+  ],
+  "author": "freeman-lab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thunder-project/thunder-docs/issues"
+  },
+  "homepage": "https://github.com/thunder-project/thunder-docs#readme",
+  "dependencies": {
+    "minidocs": "^1.1.0"
+  }
+}

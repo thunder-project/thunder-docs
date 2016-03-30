@@ -1,6 +1,6 @@
 # use with spark
 
-The distributing computing engine [`Spark`](https://github.com/apache/spark) is useful for analyzing large datasets across a compute cluster. Although all Thunder packages can be used locally and do not require Spark, the exact same code when used alongside it to distribute computation, via the Python API `pyspark`. Thunder is compatible with Spark versions 1.5 and higher.
+The distributing computing engine [Spark](https://github.com/apache/spark) is useful for analyzing large datasets across a compute cluster. Although all Thunder packages can be used locally and do not require Spark, the exact same code when used alongside it to distribute computation, via the Python API PySpark. Thunder is compatible with Spark versions 1.5 and higher.
 
 Thunder does not provide explicit utilities for starting or managing a Spark cluster. Instead, please consult the official [Spark documentation](spark-project.org/docs/latest/) for installation, either on a local machine (for multiprocessing) or on a cluster. For deploying Spark on an Amazon EC2 cluster we recommend the command line tool [`flintrock`](https://github.com/nchammas/flintrock), and for Google Compute Engine we recommend [`spark-gce`](https://github.com/broxtronix/spark-gce).
 

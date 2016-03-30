@@ -1,8 +1,21 @@
 # frequently asked questions
 
+#### How is Thunder related to [pandas](https://github.com/pydata/pandas) or [xarray](https://github.com/pydata/xarray)?
+
+At a high-level, Thunder is similar to, but more specific than, [pandas](https://github.com/pydata/pandas) or [xarray](https://github.com/pydata/xarray). Like those packages, Thunder's data objects basically wrap ndarrays, and provide extra domain-specific semantics. But whereas [pandas](https://github.com/pydata/pandas) and [xarray](https://github.com/pydata/xarray) support generic labeled tabular or labeled ndarray data, Thunder focuses on the more specific cases of images, series, time series, or movies. Because all these packages just wrap ndarrays, it's easy to move from one to another. For example, here are a few lines that load `Image` data in Thunder, convert it to a `TimeSeries`, do time domain filtering (a fourier transform), then load it into a `DataFrame` for further analysis.
+
+```
+import thunder as td
+data = td.images.fromrandom()
+ts = data.totimeseries().fourier(freq=3).flatten()
+
+import pandas as pd
+df = pd.DataFrame(ts.values)
+```
+
 #### I was previously using Thunder 0.6.x, what's changed in 1.0.0?
 
-A lot! The two biggest changes are (1) Thunder is much easier to use locally, as it no longer has a hard dependency on Spark, and (2) some of the functionality previously in Thunder is now provided in separate packages. The API has also been streamlined, and made compatible with Python 2.7 and 3.4. Beyond that, most of the functionality remains intact, with similar
+A lot! The two biggest changes are (1) Thunder is much easier to use locally, as it no longer has a hard dependency on Spark, and (2) some of the functionality previously in Thunder is now provided in separate packages. The API has also been streamlined, and made compatible with Python 2.7 and 3.4. Beyond that, most of the core functionality remains intact, in particular the concept of `Image` and `Series` data objects, the ability to load and save them from a variety of formats, and perform analyses on them.
 
 #### Does Thunder require Spark?
 

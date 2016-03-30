@@ -6,7 +6,7 @@
   "scripts": {
     "start": "budo index.js",
     "sync": "rm -rf ~/.ecosystem-docs && node build.js",
-    "build": "browserify index.js -o bundle.js"
+    "build": "npm run sync && browserify index.js -o site/bundle.js"
   },
   "repository": {
     "type": "git",

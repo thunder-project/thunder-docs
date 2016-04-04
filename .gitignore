@@ -35,6 +35,8 @@ node_modules
 markdown/showit.md
 markdown/station.md
 markdown/regional.md
+markdown/series.md
+markdown/images.md
 markdown/thunder*.md
 
 site/bundle.js

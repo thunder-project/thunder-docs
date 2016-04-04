@@ -17,6 +17,7 @@ var basepath = '~/github/thunder-project/thunder/thunder/'
 
 execSync('echo "# images\n" > markdown/images.md')
 execSync('echo "Description of images objects" >> markdown/images.md')
+execSync('echo "\n" >> markdown/images.md')
 execSync('myopts ' + basepath + 'images/readers.py -t loading >> markdown/images.md')
 execSync('echo "\n" >> markdown/images.md')
 execSync('myopts ' + basepath + 'images/images.py -c Images -t methods >> markdown/images.md')
@@ -24,6 +25,7 @@ execSync('echo "\n" >> markdown/images.md')
 
 execSync('echo "# series\n" > markdown/series.md')
 execSync('echo "Description of series objects" >> markdown/series.md')
+execSync('echo "\n" >> markdown/series.md')
 execSync('myopts ' + basepath + 'series/readers.py -t loading >> markdown/series.md')
 execSync('echo "\n" >> markdown/series.md')
 execSync('myopts ' + basepath + 'series/series.py -c Series -t methods >> markdown/series.md')

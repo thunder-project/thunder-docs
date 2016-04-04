@@ -1,4 +1,9 @@
 var minidocs = require('minidocs')
+var include = require('include-folder')
 var contents = require('./contents')
 
-minidocs(contents, {logo: './logo.svg'})
+minidocs({
+  contents: contents, 
+  markdown: include('./markdown'),
+  logo: './logo.svg'
+})

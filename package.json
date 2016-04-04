@@ -13,6 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/thunder-project/thunder-docs.git"
   },
+  "browserify": {
+    "transform": [
+      "brfs",
+      "folderify"
+    ]
+  },
   "keywords": [
     "thunder",
     "image",
@@ -26,6 +32,9 @@
   },
   "homepage": "https://github.com/thunder-project/thunder-docs#readme",
   "dependencies": {
-    "minidocs": "^1.1.0"
+    "folderify": "^1.2.1",
+    "include-folder": "^1.0.0",
+    "minidocs": "^1.1.0",
+    "myopts": "^1.0.0"
   }
 }

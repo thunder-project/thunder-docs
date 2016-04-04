@@ -6,12 +6,10 @@ module.exports = {
     'frequently asked questions': 'faq.md',
     'contributing': 'contributing.md'
   },
-  'tutorials': {
-    'basic usage': 'tutorial-basic-usage.md',
-    'images': 'tutorial-images.md',
-    'series': 'tutorial-series.md',
-    'regression': 'tutorial-regression.md',
-    'factorization': 'tutorial-factorization.md'
+  'data types': {
+    'overview': 'data-types.md',
+    'image data': 'images.md',
+    'series data': 'series.md',
   },
   'packages': {
     'core': {
@@ -26,5 +24,12 @@ module.exports = {
       'regional': 'regional.md',
       'showit': 'showit.md'
     }
+  },
+  'tutorials': {
+    'basic usage': 'tutorial-basic-usage.md',
+    'images': 'tutorial-images.md',
+    'series': 'tutorial-series.md',
+    'regression': 'tutorial-regression.md',
+    'factorization': 'tutorial-factorization.md'
   }
 }

@@ -1,6 +1,6 @@
 # series methods
 
-Here is complete documentation for methods on with series data.
+Here is complete documentation for methods on series data.
 
 #### `aggregate_by_index(function, level=0)`
 

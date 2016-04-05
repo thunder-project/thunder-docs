@@ -28,5 +28,5 @@ execSync('echo "Here is complete documentation for loading series data.\n" >> ma
 execSync('myopts ' + basepath + 'series/readers.py >> markdown/series-loading.md')
 
 execSync('echo "# series methods\n" > markdown/series-methods.md')
-execSync('echo "Here is complete documentation for methods on with series data.\n" >> markdown/series-methods.md')
+execSync('echo "Here is complete documentation for methods on series data.\n" >> markdown/series-methods.md')
 execSync('myopts ' + basepath + 'series/series.py -c Series >> markdown/series-methods.md')

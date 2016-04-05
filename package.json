@@ -7,7 +7,7 @@
     "start": "budo index.js",
     "sync": "rm -rf ~/.ecosystem-docs && node build.js",
     "build": "npm run sync && browserify index.js -o site/bundle.js",
-    "publish": "npm run build && git checkout gh-pages && cp site/bundle.js bundle.js && git add . && git commit -m 'rebuild' && git push && git checkout master"
+    "publish": "npm run build && surge site docs.thunder-project.org"
   },
   "repository": {
     "type": "git",

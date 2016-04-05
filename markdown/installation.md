@@ -2,7 +2,7 @@
 
 All packages associated with Thunder are simple Python packages that support Python 2.7 or 3.4. Most of them depend on the same set of standard scientific Python packages, including [`numpy`](https://github.com/numpy/numpy), [`scipy`](https://github.com/scipy/scipy), [`scikit-learn`](https://github.com/scikit-learn/scikit-learn) and [`scikit-image`](https://github.com/scikit-image/scikit-image). If you are just getting started with Python, we recommend installing the [Anaconda](https://www.continuum.io/downloads) distribution, which includes all of those packages. If you are coming from Matlab to Python, check out this great [cheatsheet](http://mathesaurus.sourceforge.net/matlab-numpy.html).
 
-To install the core `thunder` package just use the Python package manager `pip` by typing this into your terminal
+To install the core `thunder` package use the Python package manager `pip` by typing this in your terminal
 
 ```bash
 pip install thunder-python

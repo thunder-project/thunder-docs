@@ -5,5 +5,5 @@ var contents = require('./contents')
 minidocs({
   contents: contents, 
   markdown: include('./markdown'),
-  logo: './logo.svg'
+  logo: './logo.svg',
 })

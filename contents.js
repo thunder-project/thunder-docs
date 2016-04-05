@@ -8,8 +8,10 @@ module.exports = {
   },
   'data types': {
     'overview': 'data-types.md',
-    'image data': 'images.md',
-    'series data': 'series.md',
+    'image loading': 'image-loading.md',
+    'image methods': 'image-methods.md',
+    'series loading': 'series-loading.md',
+    'series methods': 'series-methods.md'
   },
   'packages': {
     'core': {

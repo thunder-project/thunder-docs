@@ -7,7 +7,7 @@
     "start": "budo index.js",
     "sync": "rm -rf ~/.ecosystem-docs && node build.js",
     "build": "npm run sync && browserify index.js -o site/bundle.js",
-    "publish": "npm run build && surge site docs.thunder-project.org"
+    "deploy": "npm run build && surge site docs.thunder-project.org"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,6 @@
     "folderify": "^1.2.1",
     "include-folder": "^1.0.0",
     "minidocs": "^1.1.0",
-    "myopts": "^1.0.0"
+    "myopts": "^1.1.0"
   }
 }

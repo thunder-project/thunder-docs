@@ -14,12 +14,11 @@ module.exports = {
     'series methods': 'series-methods.md'
   },
   'packages': {
-    'core': {
-      'thunder': 'thunder.md'
-    },
     'analyses': {
       'thunder-regression': 'thunder-regression.md',
-      'thunder-registration': 'thunder-registration.md'
+      'thunder-registration': 'thunder-registration.md',
+      'thunder-factorization': 'thunder-factorization.md',
+      'thunder-extraction': 'thunder-extraction.md'
     },
     'utilities': {
       'station': 'station.md',

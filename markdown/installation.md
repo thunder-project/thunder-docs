@@ -15,6 +15,19 @@ pip install thunder-regression
 pip install thunder-factorization
 ```
 
+If you want to install all related packages at the same time, you can also use
+
+```
+pip install thunder-python[all]
+```
+
+This will install:
+
+- [`thunder-regression`](https://github.com/thunder-project/thunder-regression) mass univariate regression algorithms
+- [`thunder-factorization`](https://github.com/thunder-project/thunder-factorization) matrix factorization algorithms 
+- [`thunder-registration`](https://github.com/thunder-project/thunder-registration) registration for image sequences
+- [`thunder-extraction`](https://github.com/thunder-project/thunder-extraction) feature extraction from image sequences
+
 See the section "use with spark" for information about how to run Thunder alongside the distributed computing engine [Spark](http://spark.apache.org/).
 
 Thunder also works great inside the interactive [Jupyter](https://github.com/jupyter/notebook) notebook. All of the "tutorials" are written as jupyter notebooks, and you can launch any of them interactively in a web browser via [Binder](https://github.com/binder-project/binder) by clicking this [link]().

@@ -95,7 +95,7 @@ If not specified will print options.
 
 #### `fromlist(items, accessor=None, index=None, labels=None, dtype=None, npartitions=None, engine=None)`
 
-Create series data from a list of items and optional accessor function.
+Load series data from a list with an optional accessor function.
 
 Will call accessor function on each item from the list,
 providing a generic interface for data loading.

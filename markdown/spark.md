@@ -6,7 +6,7 @@ Thunder does not provide explicit utilities for starting or managing a Spark clu
 
 Once you have a Spark cluster running, how can you use it with Thunder? First, install Thunder and any additional modules you want by running 
 
-```
+```bash
 pip install thunder-python
 ```
 

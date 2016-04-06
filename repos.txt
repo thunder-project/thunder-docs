@@ -1,7 +1,6 @@
 thunder-project/thunder-regression
 thunder-project/thunder-registration
 thunder-project/thunder-factorization
-thunder-project/thunder-extraction
 freeman-lab/station
 freeman-lab/showit
 freeman-lab/regional

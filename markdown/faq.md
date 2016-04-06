@@ -13,7 +13,7 @@ import pandas as pd
 df = pd.DataFrame(ts)
 ```
 
-#### I was previously using Thunder 0.6.x, what's changed in 1.0.0?
+#### what's different between Thunder 0.6.x and 1.0.0?
 
 A lot! The two biggest changes are (1) Thunder is much easier to use locally, as it no longer has a hard dependency on Spark, and (2) some of the functionality previously in Thunder is now provided in separate packages like [`thunder-regression`](https://github.com/thunder-project/thunder-regression) and [`thunder-registration`](https://github.com/thunder-project/thunder-registration). The API has also been streamlined, and made compatible with Python 2.7 and 3.4. Beyond that, most of the core functionality remains intact, in particular the concept of `image` and `series` data objects, the ability to load and save them from a variety of formats, and perform analyses on them.
 

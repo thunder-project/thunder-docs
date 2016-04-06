@@ -17,7 +17,7 @@ pip install thunder-factorization
 
 If you want to install all related packages at the same time, you can also use
 
-```
+```bash
 pip install thunder-python[all]
 ```
 

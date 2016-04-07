@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/thunder-project/thunder-docs#readme",
   "dependencies": {
+    "embed-images": "^1.0.0",
     "folderify": "^1.2.1",
     "include-folder": "^1.0.0",
     "minidocs": "^1.1.0",

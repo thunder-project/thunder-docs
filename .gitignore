@@ -38,5 +38,9 @@ markdown/regional.md
 markdown/series.md
 markdown/images.md
 markdown/thunder*.md
+markdown/tutorial*.md
 
 site/bundle.js
+
+tutorials/*_files
+tutorials/*.md

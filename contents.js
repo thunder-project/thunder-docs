@@ -29,8 +29,6 @@ module.exports = {
     'basics': 'tutorial-basics.md',
     'images': 'tutorial-images.md',
     'series': 'tutorial-series.md',
-    'regression': 'tutorial-regression.md',
-    'factorization': 'tutorial-factorization.md',
     'registration': 'tutorial-registration.md'
   }
 }

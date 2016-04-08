@@ -12,7 +12,7 @@ pip install thunder-python
 
 on both the master node and each worker node of the cluster.
 
-Once you have Spark running and Thunder installed, using them together is easy. All the loading methods in Thunder take an optional argument `engine`, which can be passed a `SparkContext`. This is a variable that is automatically created as `sc` when you start Spark from the executable `pyspark`, or it can be created within a python script by calling
+Once you have Spark running and Thunder installed, using them together is easy. All the loading methods in Thunder take an optional argument `engine`, which can be passed a `SparkContext`. This is automatically created as the variable `sc` when you start Spark from the executable `pyspark`, or it can be created in a python script by calling
 
 ```python
 from pyspark import SparkContext

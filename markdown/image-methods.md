@@ -216,7 +216,7 @@ Convert to local mode.
 
 #### `topng(path, prefix='image', overwrite=False)`
 
-Write 2d or 3d images as PNG files.
+Write 2d images as PNG files.
 
 Files will be written into a newly-created directory.
 Three-dimensional data will be treated as RGB channels.
@@ -249,7 +249,7 @@ Convert to distributed spark mode.
 
 #### `totif(path, prefix='image', overwrite=False)`
 
-Write 2d or 3d images as TIF files.
+Write 2d images as TIF files.
 
 Files will be written into a newly-created directory.
 Three-dimensional data will be treated as RGB channels.

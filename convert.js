@@ -16,8 +16,8 @@ files.forEach(function (name) {
 })
 
 function convert (ipynb, markdown) {
-  var base = ipynb.replace('.ipynb', '')
-  var result = ipynb.replace('.ipynb', '.md')
+  var base = ipynb.replace('tutorials', 'tutorials/build').replace('.ipynb', '')
+  var result = ipynb.replace('tutorials', 'tutorials/build').replace('.ipynb', '.md')
   var cmd = 'jupyter nbconvert ' + ipynb + ' --to=markdown --output=' + base
 
   exec(cmd, function (error, stderr, stdout) {

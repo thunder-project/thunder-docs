@@ -238,11 +238,11 @@ Reduce a function over records.
 
    A function of two records.
 
-#### `sample(nsamples=100, seed=None)`
+#### `sample(n=100, seed=None)`
 
 Extract random sample of records.
 
-- **`nsamples`** `int` `optional` `default = 100`
+- **`n`** `int` `optional` `default = 100`
 
    The number of data points to sample.
 

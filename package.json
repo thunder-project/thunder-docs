@@ -6,7 +6,8 @@
   "scripts": {
     "start": "budo index.js",
     "sync": "rm -rf ~/.ecosystem-docs && node build.js",
-    "build": "npm run sync && browserify index.js -o site/bundle.js",
+    "convert": "rm -rf tutorials/build && node convert.js",
+    "build": "npm run sync && npm run convert && browserify index.js -o site/bundle.js",
     "deploy": "npm run build && surge site docs.thunder-project.org"
   },
   "repository": {

@@ -44,3 +44,6 @@ site/bundle.js
 
 tutorials/*_files
 tutorials/*.md
+
+tutorials/build/
+tutorials/.ipynb_checkpoints/

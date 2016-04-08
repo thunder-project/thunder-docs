@@ -12,7 +12,7 @@ The `images` data type in Thunder is used to represent a collection of images or
 
 The `series` data type in Thunder is used to represent a collection of one-dimensional records that share a common index. It is well suited to time series data — where the index is time — but it can also be used for more generic series data. `series` data can be loaded from several on-disk formats, including binary and text, and  also be constructed directly from a list or ndarray. Domain-specific methods are available for filtering, preprocessing, and statistical aggregation conditional on the index.
 
-## shared
+## both
 
 Although both `images` and `series` have domain-specific methods, there are several methods shared by both, including simple aggregations like `mean` and `std`, and generic functional operators like `map` and `reduce`. 
 

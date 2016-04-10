@@ -47,3 +47,5 @@ tutorials/*.md
 
 tutorials/build/
 tutorials/.ipynb_checkpoints/
+
+.ipynb_checkpoints

@@ -5,7 +5,7 @@
 This repository contains two things:
 
 - example tutorial notebooks
-- a static documentation site made with [`minidocs`](https://github.com/freeman-lab/minidocs).
+- a static documentation site made with [`minidocs`](https://github.com/freeman-lab/minidocs)
 
 You can run the notebooks interactively by clicking this badge.
 

@@ -2,9 +2,14 @@
 
 > documentation for thunder and related modules
 
-This is a simple static site made with [`minidocs`](https://github.com/freeman-lab/minidocs).
+This repository contains two things:
 
-To build the site clone this repo then call
+- example tutorial notebooks for [`thunder`](http://thunder-project.org)
+- a static documentation site made with [`minidocs`](https://github.com/freeman-lab/minidocs).
+
+You can run the notebooks interactively by clicking the Binder badge.
+
+To build the site, clone this repo then call
 
 ```
 npm install

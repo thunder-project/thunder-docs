@@ -1,2 +1,3 @@
 thunder-python >= 1.0.0
 thunder-registration >= 1.0.0
+seaborn

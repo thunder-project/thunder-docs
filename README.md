@@ -1,5 +1,7 @@
 # thunder-docs
 
+[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/thunder-project/thunder-docs)
+
 > documentation for thunder and related modules
 
 This repository contains two things:

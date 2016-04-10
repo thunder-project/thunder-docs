@@ -1,10 +1,10 @@
 # thunder-docs
 
-> documentation for thunder and related modules
+> documentation for [`thunder`](https://github.com/thunder-project/thunder) and related modules
 
 This repository contains two things:
 
-- example tutorial notebooks for [`thunder`](http://thunder-project.org)
+- example tutorial notebooks
 - a static documentation site made with [`minidocs`](https://github.com/freeman-lab/minidocs).
 
 You can run the notebooks interactively by clicking this badge.

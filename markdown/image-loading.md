@@ -202,7 +202,7 @@ Generate random image data.
 
    Random seed.
 
-#### `fromrdd(rdd, dims=None, nrecords=None, dtype=None, labels=None)`
+#### `fromrdd(rdd, dims=None, nrecords=None, dtype=None, labels=None, ordered=False)`
 
 Load images from a Spark RDD.
 
@@ -230,7 +230,11 @@ and values are 2d or 3d ndarrays.
 
    Labels for records. If provided, should be one-dimensional.
 
-#### `fromtif(path, ext='tif', start=None, stop=None, recursive=False, nplanes=None, npartitions=None, labels=None, engine=None, credentials=None)`
+- **`ordered`** `boolean` `optional` `default = False`
+
+   Whether or not the rdd is ordered by key
+
+#### `fromtif(path, ext='tif', start=None, stop=None, recursive=False, nplanes=None, npartitions=None, labels=None, engine=None, credentials=None, discard_extra=False)`
 
 Loads images from single or multi-page TIF files.
 
@@ -266,3 +270,8 @@ if None will use default for engine.
 - **`labels`** `array` `optional` `default = None`
 
    Labels for records. If provided, should be one-dimensional.
+
+- **`discard_extra`** `boolean` `optional` `default = False`
+
+   If True and nplanes doesn't divide by the number of pages in a multi-page tiff, the reminder will
+be discarded and a warning will be shown. If False, it will raise an error

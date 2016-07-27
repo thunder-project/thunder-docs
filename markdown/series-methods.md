@@ -134,7 +134,7 @@ Compute gramian of a distributed matrix.
 The gramian is defined as the product of the matrix
 with its transpose, i.e. A^T * A.
 
-#### `map(func, index=None, with_keys=False)`
+#### `map(func, index=None, value_shape=None, dtype=None, with_keys=False)`
 
 Map an array -> array function over each record.
 
@@ -145,6 +145,15 @@ Map an array -> array function over each record.
 - **`index`** `array-like` `optional` `default = None`
 
    If known, the index to be used following function evaluation.
+
+- **`value_shape`** `int` `optional` `default=None`
+
+   Known shape of values resulting from operation. Only
+valid in spark mode.
+
+- **`dtype`** `numpy.dtype` `optional` `default = None`
+
+   If known, the type of the data following function evaluation.
 
 - **`with_keys`** `boolean` `optional` `default = False`
 

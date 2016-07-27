@@ -4,11 +4,12 @@
   "description": "documentation for thunder and related modules",
   "main": "index.js",
   "scripts": {
-    "start": "budo index.js",
+    "start": "budo index.js --pushstate --open",
     "sync": "rm -rf ~/.ecosystem-docs && node build.js",
     "convert": "rm -rf tutorials/build && node convert.js",
-    "build": "npm run sync && npm run convert && browserify index.js -o site/bundle.js",
-    "deploy": "npm run build && surge site docs.thunder-project.org"
+    "build": "npm run sync && npm run convert",
+    "bundle": "browserify index.js -o site/bundle.js",
+    "deploy": "npm run build && npm run bundle && surge site docs.thunder-project.org"
   },
   "repository": {
     "type": "git",
@@ -16,8 +17,8 @@
   },
   "browserify": {
     "transform": [
-      "brfs",
-      "folderify"
+      "read-directory/transform",
+      "sheetify/transform"
     ]
   },
   "keywords": [
@@ -34,9 +35,9 @@
   "homepage": "https://github.com/thunder-project/thunder-docs#readme",
   "dependencies": {
     "embed-images": "^1.0.0",
-    "folderify": "^1.2.1",
-    "include-folder": "^1.0.0",
-    "minidocs": "^1.1.0",
-    "myopts": "^1.1.0"
+    "minidocs": "^3.0.0",
+    "myopts": "^1.1.0",
+    "read-directory": "^1.2.0",
+    "sheetify": "^5.0.5"
   }
 }

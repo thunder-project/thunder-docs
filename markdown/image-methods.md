@@ -26,13 +26,13 @@ Filtering will be applied to every image in the collection.
 
 - **`sigma`** `scalar or sequence of scalars` `default = 2`
 
-   Size of the filter size as standard deviation in pixels. 
-A sequence is interpreted as the standard deviation for each axis. 
+   Size of the filter size as standard deviation in pixels.
+A sequence is interpreted as the standard deviation for each axis.
 A single scalar is applied equally to all axes.
 
 - **`order`** `choice of 0 / 1 / 2 / 3 or sequence from same set` `optional` `default = 0`
 
-   Order of the gaussian kernel, 0 is a gaussian, 
+   Order of the gaussian kernel, 0 is a gaussian,
 higher numbers correspond to derivatives of a gaussian.
 
 #### `localcorr(size=2)`
@@ -49,7 +49,7 @@ and then correlates the original sequence with the blurred sequence.
    Size of the filter in pixels. If a scalar, will use the same filter size
 along each dimension.
 
-#### `map_as_series(func, value_size=None, block_size='150')`
+#### `map_as_series(func, value_size=None, dtype=None, chunk_size='auto')`
 
 Efficiently apply a function to images as series data.
 
@@ -69,26 +69,17 @@ ndarray and return the transformed one-dimensional ndarray.
 func. If not supplied, will be automatically inferred for an extra
 computational cost.
 
-- **`block_size`** `str` `or tuple of block size per dimension` `optional` `default = '150'`
+- **`dtype`** `str` `optional` `default = None`
 
-   String interpreted as memory size (in megabytes e.g. '64'). Tuple of
-ints interpreted as 'pixels per dimension'.
+   dtype of one-dimensional ndarray resulting from application of func.
+If not supplied it will be automatically inferred for an extra computational cost.
 
-#### `map(func, dims=None, with_keys=False)`
+- **`chunk_size`** `str or tuple` `size of image chunk used during conversion` `default = 'auto'`
 
-Map an array -> array function over each image.
-
-- **`func`** `function`
-
-   The function to apply in the map.
-
-- **`dims`** `tuple` `optional` `default = None`
-
-   If known, the dimensions of the data following function evaluation.
-
-- **`with_keys`** `boolean` `optional` `default = False`
-
-   If true, function should be of both tuple indices and values.
+   String interpreted as memory size (in kilobytes, e.g. '64').
+The exception is the string 'auto'. In spark mode, 'auto' will choose a chunk size to make the
+resulting blocks ~100 MB in size. In local mode, 'auto' will create a single block.
+Tuple of ints interpreted as 'pixels per dimension'.
 
 #### `max_min_projection(axis=2)`
 
@@ -124,8 +115,8 @@ Filtering will be applied to every image in the collection.
 
 parameters
 size: int, optional, default = 2
-Size of the filter neighbourhood in pixels. 
-A sequence is interpreted as the neighborhood size for each axis. 
+Size of the filter neighbourhood in pixels.
+A sequence is interpreted as the neighborhood size for each axis.
 A single scalar is applied equally to all axes.
 
 #### `min()`
@@ -166,8 +157,8 @@ Downsample images by an integer factor.
 
 - **`factor`** `positive int or tuple of positive ints`
 
-   Stride to use in subsampling. If a single int is passed, 
-each dimension of the image will be downsampled by this factor. 
+   Stride to use in subsampling. If a single int is passed,
+each dimension of the image will be downsampled by this factor.
 If a tuple is passed, each dimension will be downsampled by the given factor.
 
 #### `subtract(val)`
@@ -200,15 +191,21 @@ Files will be written into a newly-created directory.
 
    If true, the directory given by path will first be deleted if it exists.
 
-#### `toblocks(size='150')`
+#### `toblocks(chunk_size='auto', padding=None)`
 
 Convert to blocks which represent subdivisions of the images data.
 
-- **`size`** `str` `or tuple of block size per dimension,`
+- **`chunk_size`** `str or tuple` `size of image chunk used during conversion` `default = 'auto'`
 
-   String interpreted as memory size (in megabytes, e.g. '64'). 
-Tuple of ints interpreted as 'pixels per dimension'. 
-Only valid in spark mode.
+   String interpreted as memory size (in kilobytes, e.g. '64').
+The exception is the string 'auto'. In spark mode, 'auto' will choose a chunk size to make the
+resulting blocks ~100 MB in size. In local mode, 'auto' will create a single block.
+Tuple of ints interpreted as 'pixels per dimension'.
+
+- **`padding`** `tuple or int`
+
+   Amount of padding along each dimensions for blocks. If an int, then
+the same amount of padding is used for all dimensions
 
 #### `tolocal()`
 
@@ -233,15 +230,18 @@ Three-dimensional data will be treated as RGB channels.
 
    If true, the directory given by path will first be deleted if it exists.
 
-#### `toseries(size='150')`
+#### `toseries(chunk_size='auto')`
 
 Converts to series data.
 
 This method is equivalent to images.toblocks(size).toSeries().
 
-- **`size`** `string memory size` `optional` `default = '150M'`
+- **`chunk_size`** `str or tuple` `size of image chunk used during conversion` `default = 'auto'`
 
-   String interpreted as memory size (e.g. '64M').
+   String interpreted as memory size (in kilobytes, e.g. '64').
+The exception is the string 'auto', which will choose a chunk size to make the
+resulting blocks ~100 MB in size. Tuple of ints interpreted as 'pixels per dimension'.
+Only valid in spark mode.
 
 #### `tospark(engine=None)`
 
@@ -273,8 +273,8 @@ Spatially filter images using a uniform filter.
 Filtering will be applied to every image in the collection.
 
 size: int, optional, default = 2
-Size of the filter neighbourhood in pixels. 
-A sequence is interpreted as the neighborhood size for each axis. 
+Size of the filter neighbourhood in pixels.
+A sequence is interpreted as the neighborhood size for each axis.
 A single scalar is applied equally to all axes.
 
 #### `var()`

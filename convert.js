@@ -6,8 +6,6 @@ var files = [
   'basics',
   'images',
   'series',
-  'regression',
-  'factorization',
   'registration'
 ]
 

@@ -149,7 +149,7 @@ Generate random gaussian series data.
 
    Computational engine (e.g. a SparkContext for Spark)
 
-#### `fromrdd(rdd, nrecords=None, shape=None, index=None, labels=None, dtype=None)`
+#### `fromrdd(rdd, nrecords=None, shape=None, index=None, labels=None, dtype=None, ordered=False)`
 
 Load series data from a Spark RDD.
 
@@ -180,6 +180,10 @@ that are not explicitly provided.
 - **`dtype`** `string` `default = None`
 
    Data numerical type (if provided will avoid check)
+
+- **`ordered`** `boolean` `optional` `default = False`
+
+   Whether or not the rdd is ordered by key
 
 #### `fromtext(path, ext='txt', dtype='float64', skip=0, shape=None, index=None, labels=None, npartitions=None, engine=None, credentials=None)`
 

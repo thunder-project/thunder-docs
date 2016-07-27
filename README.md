@@ -13,19 +13,14 @@ You can run the notebooks interactively by clicking this badge.
 
 ### for developers
 
-If you want to add documentation, to see the rendered site, clone this repo and call
+If you want to add documentation, clone this repo and modify the source material as approrpiate, then call
 
 ```
 npm install
-```
-
-Then start it by calling
-
-```
 npm start
 ```
 
-And your browser should open with the site.
+And your browser should open with the rendered site.
 
 ### python components
 

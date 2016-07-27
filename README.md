@@ -24,7 +24,7 @@ And your browser should open with the rendered site.
 
 ### source components
 
-Some site content is written directly as markdown. To modify this part of the documentation, just edit these files directly. The rest is derived from various external sources, including README files from other repositories, Python source code for automatic method documentation, or Jupyter notebooks. To regenerate markdown content derived from all of these source files, call
+Some site content is written directly as markdown. To modify this part of the documentation, just edit these files directly. The rest is derived from various external sources, including README files from other repositories (using the `ecosystem-docs` module), Python source code for automatic method documentation (using the `myopts` module), or Jupyter notebooks. To regenerate markdown content derived from all of these source files, call
 
 ```
 npm run build

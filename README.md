@@ -24,7 +24,7 @@ And your browser should open with the rendered site.
 
 ### python components
 
-Some site components are built from Python source files, including source code for automatic method documentation, or Jupyter notebooks. To regenerate these components, call
+Some site content is derived from Python source files, including source code for automatic method documentation, or Jupyter notebooks. To regenerate markdown content derived from these source files, call
 
 ```
 npm run build

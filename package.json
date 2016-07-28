@@ -17,8 +17,7 @@
   },
   "browserify": {
     "transform": [
-      "read-directory/transform",
-      "sheetify/transform"
+      "minidocs/transform"
     ]
   },
   "keywords": [
@@ -35,9 +34,7 @@
   "homepage": "https://github.com/thunder-project/thunder-docs#readme",
   "dependencies": {
     "embed-images": "^1.0.0",
-    "minidocs": "^3.0.0",
-    "myopts": "^1.1.0",
-    "read-directory": "^1.2.0",
-    "sheetify": "^5.0.5"
+    "minidocs": "^4.0.0",
+    "myopts": "^1.1.0"
   }
 }

@@ -1,10 +1,8 @@
 var minidocs = require('minidocs')
-var contents = require('./contents')
-var read = require('read-directory')
 
 var app = minidocs({
-  contents: contents, 
-  markdown: read.sync('./markdown', { extensions: false }),
+  contents: './contents', 
+  markdown: './markdown',
   logo: './logo.svg',
 })
 

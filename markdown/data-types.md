@@ -14,7 +14,7 @@ The `series` data type in Thunder is used to represent a collection of one-dimen
 
 ## both
 
-Although both `images` and `series` have domain-specific methods, there are several methods shared by both, including simple aggregations like `mean` and `std`, and generic functional operators like `map` and `reduce`. 
+Although both `images` and `series` have domain-specific methods, there are several methods shared by both, including simple aggregations like `mean` and `std`, and generic functional operators like `map` and `reduce`. These come from the shred superclass `data` that is a subclass of the `base` class. The conversion methods between `images` and `series` are preformed via an intermediate data type `blocks` that is also a subclass of `base`.
 
 You'll find yourself using `map` anytime you want to apply a generic function to each record, i.e. each individual image or series. This operation will automatically be parallelized in distributed mode. As an example of `map`, this code snippet generates random `series` data and then adds `2` and computes the mean of each record
 

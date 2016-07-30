@@ -9,11 +9,11 @@ module.exports = {
   'data types': {
     'overview': 'data-types.md',
     'base methods': 'base-methods.md',
-    'block methods': 'block-methods.md',
     'image loading': 'image-loading.md',
     'image methods': 'image-methods.md',
     'series loading': 'series-loading.md',
-    'series methods': 'series-methods.md'
+    'series methods': 'series-methods.md',
+    'block methods': 'block-methods.md'
   },
   'packages': {
     'analyses': {

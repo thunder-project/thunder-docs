@@ -1,6 +1,6 @@
 # block methods
 
-Here is complete documentation for the methods on blocks.
+Here is complete documentation for methods on blocks.
 
 #### `collect_blocks()`
 

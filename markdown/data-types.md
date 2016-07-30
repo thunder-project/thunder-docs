@@ -31,3 +31,7 @@ mapped.shape
 ```
 
 Both data types can also be converted to a local `ndarray` using `toarray()`, and can be loaded from `ndarrays` using `thunder.series.fromarray()` or `thunder.images.fromarray()`. These methods are a great way to move data back and forth between `thunder` and other Python data analysis tools like [`pandas`](https://github.com/pydata/pandas) or [`scikit-learn`](https://github.com/scikit-learn/scikit-learn). For example, you could use `thunder` to do distributed time series preprocessing, then call `toarray()`, and do local machine learning with [`scikit-learn`](https://github.com/scikit-learn/scikit-learn).
+
+## blocks
+
+The `block` type in `thunder` is a special data structure used as an intermediate between `images` and `series`. It is used to represent blocks that extend in both spatial and temporal dimensions. While most uses for the `block` type are internal to `thunder`, you may find use cases for working with them directly.

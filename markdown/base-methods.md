@@ -1,6 +1,6 @@
 # base methods
 
-Here is complete documentation for both the base and data class methods.
+Here is complete documentation for methods available on all data types.
 
 #### `astype(dtype, casting='unsafe')`
 
@@ -95,10 +95,6 @@ Return first element.
 
 Get whether object is cached (Spark only).
 
-#### `map(func, **kwargs)`
-
-Map a function over elements.
-
 #### `map(func, value_shape=None, dtype=None, with_keys=False)`
 
 Apply an array -> array function across an axis.
@@ -120,8 +116,9 @@ function should be of a (tuple, array) pair.
    Known shape of values resulting from operation. Only
 valid in spark mode.
 
-dtype: numpy.dtype, optional, default=None
-Known shape of dtype resulting from operation. Only
+- **`dtype`** `numpy dtype` `optional` `default=None`
+
+   Known shape of dtype resulting from operation. Only
 valid in spark mode.
 
 - **`with_keys`** `bool` `optional` `default=False`

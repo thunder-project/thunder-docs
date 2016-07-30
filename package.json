@@ -34,7 +34,7 @@
   "homepage": "https://github.com/thunder-project/thunder-docs#readme",
   "dependencies": {
     "embed-images": "^1.0.0",
-    "minidocs": "^4.0.2",
+    "minidocs": "^4.0.4",
     "myopts": "^1.1.0"
   }
 }

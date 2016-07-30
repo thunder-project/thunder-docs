@@ -45,19 +45,15 @@ Subtract the mean either within or across records.
 
 #### `convolve(signal, mode='full')`
 
-Conolve series data against another signal.
+Convolve series data against another signal.
 
 - **`signal`** `array`
 
    Signal to convolve with (must be 1D)
 
-- **`var`** `str`
-
-   Variable name if loading from a MAT file
-
 - **`mode`** `str` `optional` `default='full'`
 
-   Mode of convolution, options are 'full', 'same', and 'same'
+   Mode of convolution, options are 'full', 'same', and 'valid'
 
 #### `correlate(signal)`
 

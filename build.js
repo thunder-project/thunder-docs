@@ -20,9 +20,6 @@ execSync('echo "# base methods\n" > markdown/base-methods.md')
 execSync('echo "Here is complete documentation for both the base and data class methods.\n" >> markdown/base-methods.md')
 execSync('myopts ' + thunderpath + 'base.py -c Base >> markdown/base-methods.md')
 
-execSync('echo "# data methods\n" >> markdown/base-methods.md')
-execSync('myopts ' + thunderpath + 'base.py -c Data >> markdown/base-methods.md')
-
 execSync('echo "# block methods\n" > markdown/block-methods.md')
 execSync('echo "Here is complete documentation for the methods on blocks.\n" >> markdown/block-methods.md')
 execSync('myopts ' + thunderpath + '/blocks/blocks.py -c Blocks >> markdown/block-methods.md')
